@@ -1,5 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Albert Sans';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/albertsans/v1/i7dZIFdwYjGaAMFtZd_QA3xXSKZqhr-TenSHK5PPq4f3.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/baloo2/v16/wXKrE3kTposypRyd51jcAA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html {
+    font-size: 16px;
+    font-family: "Albert Sans", Helvetica, sans-serif;
+    font-weight: 600;
+    background-color:whitesmoke;
+}
+
 h1 {
-  font-family: helvetica;
-  font-weight: bold;
-  color: pink;
+    font-family: "Baloo 2";
+    /* font-size: 1.5rem; */
+    font-weight: 600;
+    color:rgb(44, 44, 44);
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+header {
+    background-color: rgb(225, 225, 225);
+    width: 100%;
+    position: fixed;
+    border-bottom: solid 0.09375rem rgb(205, 205, 205);
+}
+
+#name {
+    display: inline;
+    margin-left: 1rem;
+}
+
+.headline {
+    margin-left: 2rem;
+    display: inline;
+}
+
+#contentwrapper {
+    position: relative;
+    top: 3.25rem;
+    margin: 0 1rem 2rem 1rem;
+}
+
+#grid {
+    margin-bottom: 1.5rem;
+    display: grid;
+    grid-template: 1fr/ repeat(4, 1fr);
+    column-gap: 1rem;
+    row-gap: 0.25rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}
+
+#grid a {
+    width: max-content;
+    background-color:rgb(220, 220, 220);
+    padding: 0.25rem 0.375rem;
+    border-radius: .25rem;
+}
+
+a:link {
+    color: rgb(60, 60, 60);
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(55, 55, 55);
+}
+#grid a:hover {
+    color: black;
+    background-color: rgb(200, 200, 200);
+}
+a:active {
+    color:coral;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 0.25rem 0;
+    width: 100%;
+    background-color: rgb(225, 225, 225);
+    font-size: 0.75rem;
+}
+
+footer span {
+    padding: 0 0.5rem;
+    color: rgb(55, 55, 55);
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
