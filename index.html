@@ -2,33 +2,58 @@
 <html>
   <head>
     <title>Tomas Juzonis | Web Development Portfolio</title>
-    <link href="./home_style.css" type="text/css" rel="stylesheet">
+    <link href="./CSS/home_style.css" type="text/css" rel="stylesheet">
+    <link href="./CSS/sidebar_icon.css" type="text/css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <script src="./JS/sidebar_script.js" defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
  </head>
 <body>
   <header>
     <h1 id="name">Tomas Juzonis</h1>
-    <h2 class="headline">Web Developer. Artist. Polymath.</h2>
-    <div class="mobile-headline">
-      <pre><h2>
-          Web Developer.
-                            Artist.
-                  Polymath.
-        </h2></pre>
+    <h2 class="headline">Web Developer. <span id="title-artist">Artist.</span> Polymath.</h2>
+    <h2 class="mobile-headline">Web Developer. <span id="title-artist">Artist.</span> Polymath.</h2>
+    <nav>
+      <ul class="desktop-nav" role="presentation">
+        <a href="#"><li>Home</li></a>
+        <a href="./Pages/about.html"><li>About</li></a>
+        <a href="./Pages/contact.html"><li>Contact</li></a>
+      </ul>
+    </nav>
+    <div id="sidebar-square">
+      <div id="rectangle-flex">
+        <div class="rectangle a"></div>
+        <div class="rectangle b"></div>
+        <div class="rectangle c"></div>
+      </div>
     </div>
   </header>
+  <!-- sidebar for mobile & tablet viewports -->
+  <div id="slidingdoor"></div>
+  <aside id="sidebar">
+    <ul id="sidenav">
+      <a href="#"><li>Home</li></a>
+      <a href="./Pages/about.html"><li>About</li></a>
+      <a href="./Pages/contact.html"><li>Contact</li></a>
+    </ul>
+  </aside>
+  
   <div id="contentwrapper">
     <h2>Projects</h2>
     <div id="grid">
-      <a href="https://github.com/gammaGrey/Mixed_Messages" target="_blank">Repo:<br>Mixed Messages</a>
-      <a href="https://github.com/gammaGrey/Tax_Calculator" target="_blank">Repo:<br>UK Tax Calculator</a>
+      <a href="https://github.com/gammaGrey/Mixed_Messages" target="_blank">GitHub Repo:<br>Mixed Messages</a>
+      <span>A mad-lib style random message generator.</span>
+      <a href="https://github.com/gammaGrey/Tax_Calculator" target="_blank">GitHub Repo:<br>UK Tax Calculator</a>
+      <span>Javascript function for calculating tax<br>(web UI in the works)</span>
       <a href="https://gammagrey.github.io/big-kahuna-stone-skimming/" target="_blank">Home page:<br>Big Kahuna Personal Training</a>
+      <span>Landing page for a personal training business</span>
       <a href="https://gammagrey.github.io/community-centre-art-club/" target="_blank">Home page:<br>Community Centre Art Club</a>
+      <span>Landing page for a public art club</span>
       <a href="https://gammagrey.github.io/Toms-cssCheatSheet/cheatSheet.html" target="_blank">CSS Box Model Cheat Sheet</a>
+      <span>Describes the basics of the CSS box model</span>
     </div>
   </div>
   <footer>

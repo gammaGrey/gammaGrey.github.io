@@ -1,0 +1,71 @@
+#contentwrapper {
+    padding: 0 12.5%;
+}
+
+#social-media {
+    margin-bottom: 1rem;
+}
+
+#instagram:hover {
+    text-decoration: underline 1px;
+}
+
+#email {
+    margin: .5rem 0;
+    font-family: "Open Sans";
+    margin-bottom: 1.25rem;
+}
+
+#email-link {
+    font-weight: 400;
+}
+/* #email-link span {
+    text-decoration: none;
+} */
+a:hover {
+    color: orangered;
+}
+
+#email-link:hover::after{
+    content: "Opens your default email app";
+    display: inline-block;
+    position: relative;
+    bottom: .125rem;
+    right: -0.25rem;
+    width: fit-content;
+    padding: 0 0.25rem;
+    border-radius: 0.25rem 0.25rem 0.25rem 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    font-size: 0.75rem;
+    color: white;
+}
+
+#social-media a {
+    position: relative;
+    bottom: 0.25rem;
+}
+
+hr {
+    margin: .25rem 0;
+}
+
+form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input,
+textarea {
+    margin-top: .5rem;
+}
+
+#example {
+    font-size: 0.75rem;
+    color: #555;
+}
+
+#sendbutton {
+    padding: 0.25rem;
+}
