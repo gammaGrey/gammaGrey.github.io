@@ -10,6 +10,9 @@ function toggleInfo() {
         revealButton.style.marginBottom = "0";
         inDepth.style.display = "block";
         revealButton.innerHTML = "Hide ↑";
+        inDepth.scrollIntoView({
+            behavior: "smooth"
+        });
     };
 };
 

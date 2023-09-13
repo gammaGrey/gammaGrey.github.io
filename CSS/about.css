@@ -3,7 +3,8 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 0 32%;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 p {
@@ -34,14 +35,14 @@ p,
     line-height: 1.5;
 }
 
+::marker {
+    color: #591c0d;
+}
+
 #list-box {
     display: flex;
     justify-content: space-around;
     gap: 0.5rem;
-}
-
-::marker {
-    color: #591c0d;
 }
 
 button {
@@ -49,11 +50,14 @@ button {
     font-family: "Open Sans", sans-serif;
     margin-bottom: 1.25rem;
     margin-left: 1rem;
+
+    &:hover {
+        color: orangered;
+    }
 }
 
-button:hover {
-    color: orangered;
-}
+/* button:hover {
+} */
 
 #in-depth-title {
     display: inline;

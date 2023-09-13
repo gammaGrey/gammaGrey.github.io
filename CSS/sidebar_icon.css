@@ -17,10 +17,6 @@ aside {
     display: none;
 }
 
-#sidenav {
-    margin: 0 12.5%;
-}
-
 /* Commented out while I figure out CSS animations */
 /* @keyframes menuButton {
     from {
@@ -32,24 +28,18 @@ aside {
 }
 
 @keyframes rectangleRotate {
-    from{
+    from {
         transform: rotate(0deg);
         background-color: #ffffff;
         width: 1.875rem;
     }
 
-    to{
+    to {
         transform: rotate(90deg);
         background-color: #a5a5a5;
         width: .375rem;
     }
 } */
-
-@media only screen and (min-width: 425.1px) {
-    #sidenav {
-        margin: 0 35% 0 15%;
-    }
-}
 
 @media only screen and (max-width: 848px) {
     aside {
@@ -72,11 +62,12 @@ aside {
         height: 38px;
         background-color: orangered;
         border-radius: .625rem;
+        
+        &:hover {
+            cursor: pointer;
+        }
     }
     
-    #sidebar-square:hover {
-        cursor: pointer;
-    }
     
     #rectangle-flex {
         width: 38px;
@@ -85,7 +76,7 @@ aside {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        transition: .36s 0s cubic-bezier(.32,.64,.51,1.14);
+        transition: .4s 0s cubic-bezier(0.23, 0.72, 0.45, 1.35);
     }
     
     .rectangle {
@@ -105,37 +96,32 @@ aside {
         position: absolute;
         right: 0;
         top: 8dvh;
-        bottom: 4dvh;
         height: 88dvh;
         width: 0%;
         z-index: 3;
-        background-color: hsl(16deg 5% 95%);
+        background-color: #f3f2f2;
         border-radius: 2.25rem 0px 0px 2.25rem;
         transition: width 0.166s 0s;
-        /* ↓ Handled by sidebar_script.js now ↓ */
-        /* border-left: double #dcdcdc 0.5rem;
-        transition-timing-function: cubic-bezier(0.6, -0.28, 0.74, 0.05); */
     }
 
     #sidenav {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        margin-top: 0.75rem;
+        margin: 1.75rem 12.5% 0;
         list-style-type: none;
-    }
 
-    #sidenav a {
-        padding: 0.25rem;
-        background-color: hsl(12 75% 20% / 1);
-        text-align: center;
-        border-radius: 4rem;
-    }
-    
-    #sidenav li {
-        color: hsl(16 30% 95% / 1);
-        font-family: "Baloo 2", sans-serif;
-        font-size: 1.5rem;
+        & a {
+            border-radius: .75rem;
+            padding: 0.25rem .5rem;
+            text-align: center;
+            background-color: #591000;
+            color: #f6f0ee;
+        }
+
+        & li {
+            font-family: "Baloo 2", sans-serif;
+            font-size: 1.5rem;
+        }
     }
 }
-

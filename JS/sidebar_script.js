@@ -14,8 +14,67 @@ const lightOrange = "hsl(16 30% 85% / 1)";
 const orangered = "hsl(16 100% 50% / 1)";
 const whiteOrange = "hsl(16 5% 95% / 1)";
 
-// commented out while experimenting with turning rectangles to circles
-// comment out the other functions, and un-comment these functions to see the alternative animation
+function sidebarShow() {
+    sidebar.style.transitionTimingFunction = "ease-out";
+    
+    sideSquare.style.backgroundColor = brown;
+
+    recFlex.style.transform = "rotate(-90deg)";
+    
+    a.style.width = `6px`;
+    b.style.width = `6px`;
+    c.style.width = `6px`;
+
+    a.style.backgroundColor = lightOrange;
+    b.style.backgroundColor = lightOrange;
+    c.style.backgroundColor = lightOrange;
+
+    
+    sidebar.style.display = "block";
+    window.visualViewport.width >= 425
+        ? sidebar.style.width = "35%"
+        : sidebar.style.width = "50%";
+
+    slidingDoor.style.display = "block";
+
+    sidebar.style.borderLeft = `double ${orangered} 0.5rem`;
+
+    sideSquare.removeEventListener("click", sidebarShow);
+    sideSquare.addEventListener("click", sidebarHide);
+};
+
+function sidebarHide() {
+    sidebar.style.transitionTimingFunction = "cubic-bezier(0.6, -0.28, 0.74, 0.05)";
+    
+    sideSquare.style.backgroundColor = orangered;
+
+    recFlex.style.transform = "rotate(0deg)";
+
+    a.style.backgroundColor = whiteOrange;
+    b.style.backgroundColor = whiteOrange;
+    c.style.backgroundColor = whiteOrange;
+
+    a.style.width = `30px`;
+    b.style.width = `30px`;
+    c.style.width = `30px`;
+
+    
+    sidebar.style.width = "0%";
+    slidingDoor.style.display = "none";
+
+    let hideAfterAnimation = setInterval(() => {
+        sidebar.style.display = "none";
+        clearInterval(hideAfterAnimation);
+    },165)
+
+    sideSquare.removeEventListener("click", sidebarHide);
+    sideSquare.addEventListener("click", sidebarShow);
+};
+
+sideSquare.addEventListener("click",sidebarShow);
+slidingDoor.addEventListener("click",sidebarHide);
+
+// old animation functions below, read on to see how clunky they were
 /* 
 function rectRotate() {
     let id = null;
@@ -83,63 +142,3 @@ function rectRotateReverse() {
     sideSquare.addEventListener("click", rectRotate);
 };
 */
-
-function sidebarShow() {
-    sidebar.style.transitionTimingFunction = "ease-out";
-    
-    sideSquare.style.backgroundColor = brown;
-
-    recFlex.style.transform = "rotate(-90deg)";
-    
-    a.style.width = `6px`;
-    b.style.width = `6px`;
-    c.style.width = `6px`;
-
-    a.style.backgroundColor = lightOrange;
-    b.style.backgroundColor = lightOrange;
-    c.style.backgroundColor = lightOrange;
-
-    
-    sidebar.style.display = "block";
-    window.visualViewport.width >= 425 ?
-    sidebar.style.width = "35%" :
-    sidebar.style.width = "50%";
-
-    slidingDoor.style.display = "block";
-
-    sidebar.style.borderLeft = `double ${orangered} 0.5rem`;
-
-    sideSquare.removeEventListener("click", sidebarShow);
-    sideSquare.addEventListener("click", sidebarHide);
-};
-
-function sidebarHide() {
-    sidebar.style.transitionTimingFunction = "cubic-bezier(0.6, -0.28, 0.74, 0.05)";
-    
-    sideSquare.style.backgroundColor = orangered;
-
-    recFlex.style.transform = "rotate(0deg)";
-
-    a.style.backgroundColor = whiteOrange;
-    b.style.backgroundColor = whiteOrange;
-    c.style.backgroundColor = whiteOrange;
-
-    a.style.width = `30px`;
-    b.style.width = `30px`;
-    c.style.width = `30px`;
-
-    
-    sidebar.style.width = "0%";
-    slidingDoor.style.display = "none";
-
-    let hideAfterAnimation = setInterval(() => {
-        sidebar.style.display = "none";
-        clearInterval(hideAfterAnimation);
-    },165)
-
-    sideSquare.removeEventListener("click", sidebarHide);
-    sideSquare.addEventListener("click", sidebarShow);
-};
-
-sideSquare.addEventListener("click",sidebarShow);
-slidingDoor.addEventListener("click",sidebarHide);
