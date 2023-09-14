@@ -98,7 +98,7 @@ aside {
         top: 8dvh;
         height: 88dvh;
         width: 0%;
-        z-index: 3;
+        z-index: 10;
         background-color: #f3f2f2;
         border-radius: 2.25rem 0px 0px 2.25rem;
         transition: width 0.166s 0s;

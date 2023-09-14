@@ -95,7 +95,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 2.0625rem;
+    height: 2rem;
     background-color: #f3f2f2;
     font-size: 0.75rem;
     border-top: solid 0.125rem #cdcdcd;
@@ -139,10 +139,6 @@ footer {
 
     #grid {
         width: 97.5%
-    }
-
-    footer {
-        min-height: 4dvh;
     }
 }
 
@@ -221,6 +217,10 @@ a {
 }
 
 @media only screen and (max-width: 449px) {
+    #contentwrapper {
+        padding: 0 7.5%;
+    }
+
     #name {
         width: 25%;
     }
