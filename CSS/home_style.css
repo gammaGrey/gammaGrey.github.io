@@ -171,6 +171,11 @@ footer {
     }
 }
 
+.link-in-description {
+    padding: 0.25rem;
+    border: solid .0625rem #3c3c3c;
+}
+
 a {   
     &:link {
         color: #3c3c3c;
