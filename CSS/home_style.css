@@ -157,7 +157,6 @@ footer {
 
         &:hover {
             border: #e85 solid 0.0625rem;
-            margin: -0.0625rem;
             background-color: #fcf5f3;
         }
     }
