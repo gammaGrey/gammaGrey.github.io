@@ -172,8 +172,10 @@ footer {
 }
 
 .link-in-description {
+    display: inline-block;
     padding: 0.25rem;
-    border: solid .0625rem #3c3c3c;
+    border: solid 0.0625rem #3c3c3c;
+    margin-top: 0.5rem;
 }
 
 a {   
