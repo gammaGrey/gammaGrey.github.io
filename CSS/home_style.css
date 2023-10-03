@@ -152,11 +152,12 @@ footer {
 
     & a {
         background-color:#fcfcfc;
+        border: 0.0625rem solid transparent;
         border-radius: .25rem;
         padding: 0.125rem 0.5rem;
 
         &:hover {
-            border: #e85 solid 0.0625rem;
+            border-color: #e85;
             background-color: #fcf5f3;
         }
     }
@@ -173,8 +174,8 @@ footer {
 .link-in-description {
     display: inline-block;
     padding: 0.25rem;
-    border: solid 0.0625rem #3c3c3c;
-    margin-top: 0.5rem;
+    border: solid 0.0625rem #3c3c3c80;
+    margin-top: 0.125rem;
 }
 
 a {   
